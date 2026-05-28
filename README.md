@@ -41,26 +41,15 @@ Real-world public datasets used as source data:
 Both datasets are flat files. Part of this project involves normalizing them into a relational schema — extracting unique entities, assigning surrogate keys, and loading into structured tables.
 
 ---
+## Schema
+
+<img width="5288" height="3452" alt="Supply Chain" src="https://github.com/user-attachments/assets/aa8c599f-7390-40e9-acd3-907af041005a" />
 
 ## OLTP Schema (Phase 1)
 
 Normalized to 3NF. 12 tables covering the full supply chain.
 
-```
-suppliers ──────────────────── products ──── categories
-                                   │
-warehouses ──── inventory          │
-    │                              │
-    └──── supplier_orders ─────────┘
-    │         │
-    │    supplier_order_items
-    │
-    └──── shipments ──── carriers
-              │
-           orders ──── order_items
-              │
-           customers
-```
+<img width="3713" height="2989" alt="OLTP Schema" src="https://github.com/user-attachments/assets/7b439095-8a1b-4d3e-a6df-020873c6c09b" />
 
 ### Tables
 
